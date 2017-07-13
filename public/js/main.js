@@ -98,6 +98,7 @@ const remoteSdpTextElement = $('#remoteSdpText');
       {'iceServers': []}
     );
     peer.ontrack = (event) => {
+      console.log('ontrack()', event);
       // 相手側のメディア・ストリームを設定
       remoteVideoElement.srcObject = event.streams[0];
     };
